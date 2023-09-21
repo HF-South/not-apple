@@ -1,4 +1,4 @@
-# Not Apple site
+# Not Apple site https://not-apple.hf-south.repl.co/
 ## WARNING !!! THIS IS NOT RELATED IN ANY KIND TO APPLE
 ### UPDATE LOG:
 ### 1.0: Code trandered from replit --> github
