@@ -1,3 +1,4 @@
+# Please apple dont sue me
 # Not Apple site https://not-apple.hf-south.repl.co/
 ## WARNING !!! THIS IS NOT RELATED IN ANY KIND TO APPLE
 ### UPDATE LOG:
