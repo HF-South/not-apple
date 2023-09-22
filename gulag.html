@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulag</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Send the video to the background */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .start-button {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <button class="start-button" id="startButton">Click here to start the video message</button>
+    </div>
+    <video id="fullscreenVideo" autoplay loop>
+        <source src="videos/gulag.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // Check if the video element is supported
+        const videoElement = document.getElementById("fullscreenVideo");
+        const startButton = document.getElementById("startButton");
+
+        if (videoElement) {
+            // Hide the video element initially
+            videoElement.style.display = "none";
+
+            // Play the video when the page loads
+            videoElement.play().catch(error => {
+                console.error("Autoplay was prevented:", error);
+                // You can handle autoplay restrictions here
+            });
+
+            // Show the video and hide the overlay when the start button is clicked
+            startButton.addEventListener("click", () => {
+                videoElement.style.display = "block";
+                document.querySelector(".overlay").style.display = "none";
+
+                // Request fullscreen and play the video
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen().then(() => {
+                        videoElement.play();
+                    }).catch(error => {
+                        console.error("Fullscreen request failed:", error);
+                    });
+                }
+            });
+
+            // Add event listener to make video fullscreen
+            videoElement.addEventListener("click", () => {
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.mozRequestFullScreen) {
+                    videoElement.mozRequestFullScreen();
+                } else if (videoElement.webkitRequestFullscreen) {
+                    videoElement.webkitRequestFullscreen();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
