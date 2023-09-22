@@ -1,0 +1,92 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the entire page */
+body {
+    font-family: 'Apple SD Gothic Neo', Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+/* Header styles */
+.header {
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Support Page Content */
+.support {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.support h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.support p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* "Buy Me a Coffee" button */
+.support a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #147efb;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.support a:hover {
+    background-color: #000000;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 48px 0;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Style footer links */
+.footer a {
+    color: #fff;
+    text-decoration: none; 
+}
