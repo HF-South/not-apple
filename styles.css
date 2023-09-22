@@ -124,4 +124,8 @@ p {
     font-size: 0.9rem;
 }
 
-/* Additional styles and media queries can be added as needed */
+/* Style footer links */
+.footer a {
+    color: #fff; 
+    text-decoration: none; 
+}
